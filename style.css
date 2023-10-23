@@ -1,8 +1,399 @@
+/*------RESET----*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; }
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .6s;
+    transition-duration: .6s;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+}
 
-    li {
-        list-style: none; }
+li {
+    list-style: none;
+}
+
+/*------MAIN / SECCION HERO-------*/
+body {
+    font-family: 'Barlow', sans-serif;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    background: rgb(35,9,108);
+    background: linear-gradient(104deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+.title{
+    margin-left: 280px ;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.438)), url(./images/fondo-hero.png);
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.hero p {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*------MAIN / SECCION CARD-------*/
+
+.section-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px;
+}
+
+.card {
+    border-radius: 5px;
+    border: solid black 2px;
+    -webkit-box-shadow: 2px 10px 34px 15px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 10px 34px 15px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 10px 34px 15px rgba(0, 0, 0, 0.75);
+}
+
+
+/*------MAIN / SECCION BUTTON-------*/
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:baseline;
+    padding-top: 25px;
+    padding-left: 15px;
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+@media (min-width: 450px) {
+    h1.heading {
+        font-size: 1.75em;
+    }
+}
+
+@media (min-width: 760px) {
+    h1.heading {
+        font-size: 3.25em;
+    }
+}
+
+@media (min-width: 900px) {
+    h1.heading {
+        font-size: 4.25em;
+        margin: 0 0 0.5em;
+    }
+}
+
+.btnfos {
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    margin: 0 auto 2em;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+@media (min-width: 400px) {
+    .btnfos {
+        display: inline-block;
+        margin-right: 2.5em;
+    }
+
+    .btnfos:nth-of-type(even) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 600px) {
+    .btnfos:nth-of-type(even) {
+        margin-right: 2.5em;
+    }
+
+    .btnfos:nth-of-type(5) {
+        margin-right: 0;
+    }
+}
+
+.btnfos-1 {
+    background: rgb(75, 142, 243);
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnfos-1 svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+}
+
+.btnfos-1 rect {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1;
+    stroke-dasharray: 422, 0;
+}
+
+.btnfos-1:hover {
+    background: rgba(225, 51, 45, 0);
+    letter-spacing: 1px;
+    font-weight: 900;
+}
+
+.btnfos-1:hover rect {
+    stroke-width: 5;
+    stroke-dasharray: 15, 310;
+    stroke-dashoffset: 48;
+    -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/*------MAIN / SECCION FORM-------*/
+
+.needs-validation{
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/*------MAIN / SECCION ICONS-------*/
+
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.icons h4{
+    padding: 15px;
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+
+.image1 img{
+    margin: 15px;
+}
+
+.fixed{
+    border-radius: 50%;
+    position: fixed;
+    z-index: 999;
+    bottom: 20px;
+    right: 25px;
+    transition: ease 0.3s;
+    animation: efecto 1.2s infinite
+}
+
+.fixed:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.boton{
+    width: 80px;
+    transition: ease 1s;
+}
+
+@keyframes efecto{
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+    100%{
+        box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+    }
+}
+
+/*-------- CSS EN FOOTER--------*/
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: blanchedalmond;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    background: rgb(35,9,108);
+    background: linear-gradient(104deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+/*-------- CSS HEADER PAGE---------*/
+
+.container-fluid h1{
+    color: white;
+}
+
+.back :hover{
+    padding-left: 0;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    box-shadow: 0px 0px 15px 15px white;
+    -webkit-box-shadow: 0px 0px 15px 15px #6e5fc2;
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+.back img{
+    margin: 20px;
+    padding: 0;
+}
+
+/*--------- CSS PROJECT ---------*/
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+.project p{
+    font-size: 25px;
+    color: black;
+}
+
+.fondo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+.fondo-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: blanchedalmond;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+}
+
+.back-desarrollo img{
+    margin: 20px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-arounds;
+    align-items: center;
+}
+
+/*------- CSS en project Free---------*/
+
+.titleFree{
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+    text-align: center;
+    margin-bottom: 0;
+    color: black;
+}
+
+.titleFree h1{
+    font-size: 55px;
+    color: black;
+}
+
+.titleFree h2{
+    font-size: 35px;
+    margin-bottom: 0;
+    color: black;
+}
+
+.titleFree h3{
+    margin-bottom: 0;
+    color: black;
+}
+
+.section1{
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+.section2{
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+}
+
+.sampleImage{
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.linkFree{
+    background: rgb(35,9,108);
+    background: linear-gradient(270deg, rgba(35,9,108,1) 34%, rgba(26,155,168,1) 55%, rgba(248,250,251,1) 84%);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
